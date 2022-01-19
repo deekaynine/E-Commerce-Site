@@ -4,6 +4,7 @@ import CollectionItem from "../collection-item/collection-item.component";
 
 import "./preview-collection.scss";
 
+//getting all collection items from redux global  items array and displaying
 const CollectionPreview = ({ title, items }) => {
   return (
     <div className="collection-preview">
@@ -11,8 +12,8 @@ const CollectionPreview = ({ title, items }) => {
       <div className="preview">
         {items
           .filter((item, index) => index < 4)
-          .map(({ id, ...otherItemProps }) => (
-            <CollectionItem key={id} {...otherItemProps} />
+          .map((item) => (
+            <CollectionItem key={item.id} item={item} />
           ))}
       </div>
     </div>
