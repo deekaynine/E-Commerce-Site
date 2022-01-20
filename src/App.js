@@ -9,11 +9,11 @@ import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component.jsx";
+import CheckoutPage from "./pages/checkout/checkout";
 import Header from "./components/header/header.jsx";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.jsx";
 
 import { setCurrentUser } from "./redux/user/userActions";
-
 import { selectCurrentUser } from "./redux/user/userSelector";
 
 class App extends React.Component {
@@ -54,6 +54,7 @@ class App extends React.Component {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/shop" element={<ShopPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
             {this.props.currentUser ? (
               <Route path="/signin" element={<Navigate to="/" />} />
             ) : (

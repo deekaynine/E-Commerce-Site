@@ -21,7 +21,7 @@ const cartIcon = ({ toggleCart, itemCount }) => {
 //state comes from the whole reducer state
 //memoization
 const mapStateToProps = createStructuredSelector({
-  itemCount: selectCartItemsCount(),
+  itemCount: selectCartItemsCount,
 });
 
 const mapDispatchToProps = (dispatch) => ({
