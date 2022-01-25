@@ -1,8 +1,8 @@
 import React from "react";
 
-import CollectionItem from "../collection-item/collection-item.component";
+import CollectionItem from "../collection-item/collection-item";
 
-import "./preview-collection.scss";
+import "./CollectionPreview.scss";
 
 //getting all collection items from redux global  items array and displaying
 const CollectionPreview = ({ title, items }) => {
