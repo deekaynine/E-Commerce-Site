@@ -18,7 +18,7 @@ import { selectCurrentUser } from "./redux/user/userSelector";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
-
+  //snapshot automatically comes with the userref in firebase
   //userAuth object comes from firebase auth subscription
   //userAuth will persist until signed out
   componentDidMount() {
