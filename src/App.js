@@ -23,7 +23,7 @@ class App extends React.Component {
   //userAuth will persist until signed out
   componentDidMount() {
     const { setCurrentUser } = this.props;
-    //unsubscribefromauth gives back a function to unsub in the unmount method
+    //when unsubscribed it listens to auth changes, firebase always gives back a ref object at a location even if if doesn't exists
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         //logging userAuth data to database
@@ -42,6 +42,7 @@ class App extends React.Component {
     });
   }
 
+  //gets rid of listener
   componentWillUnmount() {
     this.unsubscribeFromAuth();
   }

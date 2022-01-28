@@ -45,7 +45,7 @@ export const addCollectionAndDocuments = async (
   collectionKey,
   objectsToAdd
 ) => {
-  //firebase automatically gives back a ref object when pointing to a document or collection
+  //firebase automatically gives back a ref object when pointing to a document or collection even if empty
   const collectionRef = firestore.collection(collectionKey);
 
   console.log(collectionRef);

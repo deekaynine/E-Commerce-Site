@@ -12,8 +12,6 @@ const CollectionPage = () => {
   const { collectionId } = useParams();
   const collectionObj = useSelector(selectCollection(collectionId));
 
-  console.log(collectionId);
-  console.log(collectionObj);
   const { title, items } = collectionObj;
   return (
     <div className="collection-page">
