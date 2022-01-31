@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 
-import CollectionItem from "../../components/collection-item/collection-item";
+import CollectionItem from "../../components/collection-item/collectionItem";
 
 import { selectCollection } from "../../redux/shop/shopSelectors";
 

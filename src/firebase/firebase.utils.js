@@ -13,6 +13,8 @@ const config = {
   measurementId: "G-DSDJQXWBM8",
 };
 
+firebase.initializeApp(config);
+
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
@@ -39,16 +41,12 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
-firebase.initializeApp(config);
-
 export const addCollectionAndDocuments = async (
   collectionKey,
   objectsToAdd
 ) => {
   //firebase automatically gives back a ref object when pointing to a document or collection even if empty
   const collectionRef = firestore.collection(collectionKey);
-
-  console.log(collectionRef);
 
   //batches all calls together so if it fails the whole batch fails, used for consistency in errors
   const batch = firestore.batch();
@@ -80,9 +78,8 @@ export const convertCollectionsSnapshotToMap = (collections) => {
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
-//initialize google auth with firebase
-const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ prompt: "select_account" });
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+googleProvider.setCustomParameters({ prompt: "select_account" });
+export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 export default firebase;
