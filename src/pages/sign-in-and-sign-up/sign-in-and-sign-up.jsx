@@ -1,7 +1,7 @@
 import React from "react";
 
 import SignIn from "../../components/sign-in/sign-in";
-import SignUp from "../../components/sign-up/sign-up";
+import SignUp from "../../components/sign-up/signUp";
 
 import { SignInAndSignUpContainer } from "./sign-in-and-sign-up-styles.js";
 

@@ -12,29 +12,14 @@ import Header from "./components/header/header.jsx";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.jsx";
 
 import { selectCurrentUser } from "./redux/user/userSelector";
+import { checkUserSession } from "./redux/user/userActions";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
-  //snapshot automatically comes with the userref in firebase
-  //userAuth object comes from firebase auth subscription
-  //userAuth will persist until signed out
+
   componentDidMount() {
-    // //when unsubscribed it listens to auth changes, firebase always gives back a ref object at a location even if if doesn't exists
-    // this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
-    //   if (userAuth) {
-    //     //logging userAuth data to database
-    //     const userRef = await createUserProfileDocument(userAuth);
-    //     //setting userAuth data to state redux
-    //     userRef.onSnapshot((snapShot) => {
-    //       setCurrentUser({
-    //         id: snapShot.id,
-    //         ...snapShot.data(),
-    //       });
-    //     });
-    //   }
-    //   //if null userAuth
-    //   setCurrentUser(userAuth);
-    // });
+    const { checkUserSession } = this.props;
+    checkUserSession();
   }
 
   //gets rid of listener
@@ -67,4 +52,8 @@ const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
 });
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = (dispatch) => ({
+  checkUserSession: () => dispatch(checkUserSession()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
