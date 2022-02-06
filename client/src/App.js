@@ -5,8 +5,10 @@ import { selectCurrentUser } from "./redux/user/userSelector";
 import { checkUserSession } from "./redux/user/userActions";
 
 import Header from "./components/header/header";
+import Spinner from "./components/spinner/spinner";
 import { GlobalStyle } from "./globalStyles";
 
+//chunking/splitting code for better performance
 const HomePage = lazy(() => import("./pages/homepage/homepage.component"));
 const ShopPage = lazy(() => import("./pages/shop/shop.component.jsx"));
 const CheckoutPage = lazy(() => import("./pages/checkout/checkout"));
@@ -27,8 +29,8 @@ const App = () => {
       <GlobalStyle />
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Spinner />}>
+          <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/shop/*" element={<ShopPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
@@ -38,8 +40,8 @@ const App = () => {
             ) : (
               <Route path="/signin" element={<SignInAndSignUpPage />} />
             )}
-          </Suspense>
-        </Routes>
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </div>
   );
