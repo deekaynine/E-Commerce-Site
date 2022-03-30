@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.356a4de5.js",
+    "static/css/337.30508efb.chunk.css": "/static/css/337.30508efb.chunk.css",
+    "static/js/337.ddc00495.chunk.js": "/static/js/337.ddc00495.chunk.js",
+    "static/js/387.a7f1328e.chunk.js": "/static/js/387.a7f1328e.chunk.js",
+    "static/js/446.87273a91.chunk.js": "/static/js/446.87273a91.chunk.js",
+    "static/js/827.5d4795b5.chunk.js": "/static/js/827.5d4795b5.chunk.js",
+    "static/js/706.000bf1ce.chunk.js": "/static/js/706.000bf1ce.chunk.js",
+    "static/js/275.21a652e2.chunk.js": "/static/js/275.21a652e2.chunk.js",
+    "static/js/833.76901652.chunk.js": "/static/js/833.76901652.chunk.js",
+    "static/js/226.0a957824.chunk.js": "/static/js/226.0a957824.chunk.js",
+    "static/media/shopping-bag.svg": "/static/media/shopping-bag.a688874f6f1507316bdfa420328a4a53.svg",
+    "static/media/crown.svg": "/static/media/crown.3a4e2b15908e7a4c25343677d232b7e6.svg",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.356a4de5.js.map": "/static/js/main.356a4de5.js.map",
+    "337.30508efb.chunk.css.map": "/static/css/337.30508efb.chunk.css.map",
+    "337.ddc00495.chunk.js.map": "/static/js/337.ddc00495.chunk.js.map",
+    "387.a7f1328e.chunk.js.map": "/static/js/387.a7f1328e.chunk.js.map",
+    "446.87273a91.chunk.js.map": "/static/js/446.87273a91.chunk.js.map",
+    "827.5d4795b5.chunk.js.map": "/static/js/827.5d4795b5.chunk.js.map",
+    "706.000bf1ce.chunk.js.map": "/static/js/706.000bf1ce.chunk.js.map",
+    "275.21a652e2.chunk.js.map": "/static/js/275.21a652e2.chunk.js.map",
+    "833.76901652.chunk.js.map": "/static/js/833.76901652.chunk.js.map",
+    "226.0a957824.chunk.js.map": "/static/js/226.0a957824.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.356a4de5.js"
+  ]
+}
