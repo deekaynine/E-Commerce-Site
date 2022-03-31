@@ -19,8 +19,8 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-if (process.env.NODE_ENV == "production") {
-  app.use(express.static(path.join(__dirname, "client/build", "index.html")));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
 
   app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "client/build", "index.html"));
@@ -30,10 +30,6 @@ if (process.env.NODE_ENV == "production") {
 app.listen(PORT, (error) => {
   if (error) throw error;
   console.log(`Server running on port : ${PORT}`);
-});
-
-app.get("/", (req, res) => {
-  res.send("Hello, welcome to the clothing store!");
 });
 
 app.post("/payment", (req, res) => {
