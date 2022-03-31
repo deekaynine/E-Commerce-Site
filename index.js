@@ -32,6 +32,10 @@ app.listen(PORT, (error) => {
   console.log(`Server running on port : ${PORT}`);
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello, welcome to the clothing store!");
+});
+
 app.post("/payment", (req, res) => {
   const body = {
     source: req.body.token.id,
